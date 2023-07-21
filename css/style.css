@@ -1,0 +1,250 @@
+/******************************************
+/* CSS
+/*******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  /* outline: 1px solid limegreen !important; */
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+body{
+  padding: 5rem;
+  background-color: rgb(114, 84, 219);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding-bottom: 0;
+}
+body > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navigate{
+  display: flex;
+  gap: 0rem 1rem;
+}
+#girlPicture{
+  max-width: 80vw;
+  height: 35vh;
+  border: 1rem solid rgb(250, 117, 250);
+  border-radius: 30px;
+}
+button{
+  height: 5vh;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 2rem;
+  background: white;
+  padding: 0rem 2rem 3rem 2rem;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  color: rgb(114, 84, 219);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+button:hover{
+  cursor: pointer;
+  box-shadow: 0 5px rgb(56, 56, 56);
+  transform: translateY(4px);
+  transition: 0.2s ease-in-out;
+}
+#total-dislike:hover, #total-like:hover{
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+@keyframes glowing {
+  0% {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(250, 117, 250);
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0 0 20px rgb(250, 117, 250);
+  }
+  100% {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(250, 117, 250);
+  }
+}
+ 
+#next, #reset{
+  color: rgb(114, 84, 219);
+  animation: glowing 1300ms infinite;
+}
+
+#like, #dislike{
+  margin-right: 4rem;
+}
+
+#reset, #next{
+  margin-left: 0;
+  margin-right: 0;
+}
+.hfm{
+  display: none;
+}
+
+
+.images{
+  display: flex;
+  margin-top: -2.5rem;
+}
+.tomatoes{
+  display: none;
+}
+.hide{
+  display: none;
+}
+#hideWhenEnd{
+  margin-top: -1rem;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+  font-family: 'Mogra', cursive;
+}
+h3{
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: -1rem;
+  margin-top: 0.4rem;
+  font-family: 'Mogra', cursive;
+}
+#likesWins, #dislikesWins{
+  position: fixed;
+  top: 50vw;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  border: 2rem solid rgb(250, 235, 101);
+  border-radius: 50px;
+  background: black;
+}
+#dislikesWins {
+  border: none;
+}
+img#faceLeft, img#faceRight{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px){
+  body{
+    margin: 0 7rem;
+  }
+  button{
+    padding: 0rem 2rem 3.5rem 2rem;
+    font-size: 3rem;
+  }
+  .tags{
+    display: flex;
+    gap: 0 4rem;
+  }
+  img#faceLeft, img#faceRight{
+    display: block;
+  }
+  .left, .right{
+    display: flex;
+    flex-direction: column;
+  }
+  .images img.hfm{
+    max-width: 20vw;
+    max-height: 15vh;
+    margin-top: 10rem;
+    padding: 0 1rem;
+  }
+  .hfm{
+    display: block;
+  }
+  #girlPicture{
+    max-width: 60vw;
+    height: 50vh;
+    border-radius: 30px;
+  }
+  #tomatoL{
+    margin-left: 15rem;
+    margin-right: -15rem;
+    z-index: 10;
+  }
+  #tomatoR{
+    margin-top: 20rem;
+    z-index: 10;
+    margin-left: -15rem;
+    margin-right: 15rem;
+  }
+  img[src="tomatosplat.png"]{
+    max-width: 15vw;
+    max-height: 15vh;
+  }
+  #like, #dislike{
+    margin-right: 0rem;
+  }
+  #likesWins, #dislikesWins{
+    position: fixed;
+    top: 15vh;
+    left: 15vw;
+    width: 70vw;
+    height: 70vh;
+  }
+  img[src="tomatosplat.png"]{
+    max-width: 20vw;
+    max-height: 15vh;
+  }
+  #tomatoL{
+    margin-left: 22rem;
+    margin-right: -22rem;
+    z-index: 10;
+  }
+  #tomatoR{
+    margin-top: 15rem;
+    z-index: 10;
+    margin-left: -22rem;
+    margin-right: 22rem;
+  }
+  #like, #dislike{
+    padding-bottom: 4rem;
+  }
+  
+  
+}
+@media (min-width: 1280px){
+  body{
+    margin: 0 25rem;
+  }
+  .images img[src="thumbsup.png"], .images img[src="thumbsup2.png"]{
+    max-width: 40vw;
+    max-height: 20vh;
+  }
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

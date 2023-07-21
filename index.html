@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		
+		<video id="likesWins"src="johncenacupidedited.mp4" onended="reloadPage()" class="hide"></video>
+		<video id="dislikesWins" src="Inkedspiderman.mp4" onended="reloadPage()" class="hide"></video>
+		<div id="hideWhenEnd">
+			<h1>MemeVote</h1>
+			<h3 id="tyMsg" class="hide"></h3>
+			<div class="images">
+				<img src="tomatosplat.png" id="tomatoL" class="tomatoes" alt="">
+				<img id="faceLeft" src="thinkingR.png" class="hfm showImages" alt="">
+				<img id="girlPicture" src="" alt="">
+				<img id="faceRight" src="thinking.png" class="hfm showImages" alt="">
+				<img src="tomatosplat.png" id="tomatoR" class="tomatoes" alt="">
+				<audio id="yayButtonSound" src=""></audio>
+				<audio id="booButtonSound" src=""></audio>
+			</div>
+			<h3>11 Votes = GAME OVER</h3>
+			<div class="navigate">
+				<button id="reset">&#8635;</button>
+				<button id="next">NEXT</button>
+			</div>
+			<div class="tags">
+				<div class="left">
+					<button id="like" class="tag-button">👍</button>
+					<button id="total-like" class="tag-button">?</button>
+				</div>
+				<div class="right">
+					<button id="dislike" class="tag-button">👎</button>
+					<button id="total-dislike" class="tag-button">?</button>
+				</div>
+				
+			</div>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/confetti.js"></script>
+	</body>
+</html>
